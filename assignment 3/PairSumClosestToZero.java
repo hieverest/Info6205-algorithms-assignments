@@ -11,7 +11,7 @@ class PairSumClosestToZero {
 
         while(start < end) {
             if(sum > Math.abs(arr[start] + arr[end])) {
-                sum = arr[start] + arr[end];
+                sum = Math.abs(arr[start] + arr[end]);
                 finalStart = start;
                 finalEnd = end;
             }
@@ -25,13 +25,13 @@ class PairSumClosestToZero {
             }
         }
         
-        System.out.println("Sum = " + sum + ", Start = " + finalStart + ", End = " + finalEnd);
+        System.out.println("Abs of Sum = " + sum + ", Start = " + finalStart + ", End = " + finalEnd);
         
         
     }
 
     public static void main(String[] args) {
-        int[] arr = { -5, -3, -2, 1, 2, 3, 77, 88, 100 };
+        int[] arr = { -100, -3, -2, 1, 77 };
         pairSumClosestToZero(arr);
     }
 }
